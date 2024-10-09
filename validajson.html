@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exemplo 03</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1> Dados do Arquivo ex01.json</h1>
+    <p id="nome"></p>
+    <p id="idade"></p>
+    <p id="endereco"></p>
+    <p id="filhos"></p>
+    <p id="nome2"></p>
+    <p id="Idade2"></p>
+    <p id="endereco2"></p>
+    <p id="filhos2"></p>
+    <p id="nome3"></p>
+    <p id="Idade3"></p>
+    <p id="endereco3"></p>
+    <p id="filhos3"></p>
+    <script>
+        fetch("dados2.json")
+        .then(response => response.json())
+        .then(dados => {
+            document.querySelector("#nome", "#idade", "#endereco", "#filhos").textContent = " Nome: " + dados.nome  + "     " + " Endereço: " + dados.endereco + " " + " "+ " Filhos: " + dados.filhos;
+         
+            document.querySelector("#nome2", "#idade2", "#endereco2", "#filhos2").textContent = " Nome: " + dados.nome2  + "     " + " Endereço: " + dados.endereco2 + " " + " "+ " Filhos: " + dados.filhos2;
+
+            document.querySelector("#nome3", "#idade3", "#endereco3", "#filhos3").textContent = " Nome: " + dados.nome3  + "     " + " Endereço: " + dados.endereco3 + " " + " "+ " Filhos: " + dados.filhos3;
+           
+        })
+    </script>
+</body>
+
+</html>

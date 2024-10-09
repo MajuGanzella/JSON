@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='/_css/acai.css'>
+</head>
+<body>
+    <h1>Formulário Superaçaijin</h1>
+    <form method="get" action="envio_dados.php">
+       
+    <fieldset class="borda">
+        <legend>Dados Pessoais</legend>
+        Nome:<br><input  type="text" id="nome" name="nome"style="color: black"  > 
+        <br>
+        <br>
+        Idade: <br> <input type="number" id="idade" name="Idade" style="color: black">
+        <br>
+        <br>
+        Telefone:<br> <input type="tel" id="telefone" name="telefone"style="color: black" >
+        <br>
+        <br>
+        Endereço: <br> <input type="text" id="end"  name="Endereço" style="color: black">
+        <br>
+        <br>
+        Planeta de Origem: <br>
+        <br>
+        <select style="width: 350px;color: black" name="Planeta" id="Planeta">
+            <option style="color: black";>Terra</option>
+            <option style="color: black";>Marte</option>
+            <option style="color: black";>Jupter</option>
+            <option style="color: black";>Saturno</option> </select>
+    </fieldset>
+      
+    <br>
+    <fieldset class="borda">
+        <legend>Dados Extras:</legend>
+        <br>
+        Raça do Universo 7 preferida: <select style="width: 350px;color: black" name="Planeta" id="Planeta">
+            <option style="color: black";>Pastor-alemão</option>
+            <option style="color: black";>Vira-latas</option>
+            <option style="color: black";>Salsicha</option>
+            <option style="color: black";>Poodle</option> </select>
+        <br>
+        <br>
+        <label for="Trab">Trabalho:</label>
+            <input type="radio" name="trab" id="male" value="aut">
+            <label for="male">Autonomo</label>
+            <input type="radio" name="trab" id="male" value="CLT">
+            <label for="male">Empregado CLT</label>
+            <input type="radio" name="trab" id="male" value="Emp">
+            <label for="male">Empresário</label>
+            <input type="radio" name="trab" id="male" value="Goku">
+            <label for="male">Tipo Goku</label>    
+    </fieldset>
+    <br>
+    <fieldset class="borda">
+        <legend> Seu açai é perfeito de que jeito?</legend>
+       <br>
+                <input type="checkbox" name="area1" value="Puro" /> Puro
+                <input type="checkbox" name="area2" value="Banana" /> Com Banana
+                <input type="checkbox" name="area3" value="Morg" /> Com Morango
+                <input type="checkbox" name="area4" value="Gran" /> Com Granola
+                <input type="checkbox" name="area4" value="Maluco" /> Tem gosto de terra
+
+    </fieldset>
+    <br>
+    <fieldset class="borda">
+        <legend>Qual o tamanho perfeito?</legend>
+        <br>
+            <input type="radio" name="trab" id="male" value="5">
+            <label for="male">500ml</label>
+            <input type="radio" name="trab" id="male" value="3">
+            <label for="male">300ml</label>
+            <input type="radio" name="trab" id="male" value="1">
+            <label for="male">100ml</label>
+            <input type="radio" name="trab" id="male" value="cas">
+            <label for="male">Casquinha</label>   
+            <input type="radio" name="trab" id="male" value="Maluco">
+            <label for="male">Qual a parte de gosto de terra você não intendeu?</label>   
+    </fieldset>
+    <br>
+    <fieldset class="borda">
+        <p>Observações:</p>
+        <textarea id="exemplo02" rows="4" cols="100"; style="color:black">Escreva suas Observações...Eu gosto de açaí porque...</textarea>
+    </fieldset>
+    <br>
+    <br>
+    <br>
+    <div>
+        
+        <input  id="botao"  type="reset" value="Limpar">
+        <input id="botao"  type="submit" name="enviar" value="Json">
+
+    </div>
+</form>
+<script>
+    let formulario = document.querySelector("#meuFormulario");
+
+    formulario.addEventListener("submit", function(event) { 
+        event.preventDefault();
+        let dados = {};
+        dados.nome = document.querySelector("#nome").value;
+        dados.idade = document.querySelector("#idade").value;
+        dados.telefone= document.querySelector("#telefone").value;
+        dados.end = document.querySelector("#end").value;
+
+
+        let dadosJSON = JSON.stringify(dados);
+        alert(dadosJSON)
+
+    });
+</script>
+</body>
+</html>

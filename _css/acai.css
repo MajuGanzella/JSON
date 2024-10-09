@@ -1,0 +1,36 @@
+*{
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+h1{
+    background-color: rgb(179, 0, 179);
+    font-family: cursive;
+    color: rgb(243, 201, 94);
+    text-align: center;
+    border: dashed  rgb(243, 201, 94);;
+}
+body{
+    background-image: url('/_imagens/goku.png');
+    background-color: rgb(79, 25, 129);
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: right top;
+}
+    .borda{
+        border: 3px solid yellow;
+    }
+input[type=text],
+input[type=number]{
+    width: 700px;
+    padding: 5px;
+    border-radius: 5%;
+}
+#botao{
+    
+    background-color: rgb(97, 12, 97);
+    width: 30%;
+    height: 40%;
+
+}
+  

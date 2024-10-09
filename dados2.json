@@ -1,0 +1,8 @@
+{
+    "nome" : "José Silva" ,  "idade" : 27, "endereco" : "Rua Voorhees; Cidade: Mirassol ", "filhos" :["Joana", " João"],
+
+    "nome2" : "Antônio Prado" , "idade2" : 50, "endereco2" : "Endereço: Rua Friday; Cidade: Tanabi ", "filhos2" :["Mauricio"],
+
+    "nome3" : "Geisa Pereira" , "idade3" : 30, "endereco3" : "Rua LastDream; Cidade: São Paulo ", "filhos3" :["Thiago"]
+    
+}
